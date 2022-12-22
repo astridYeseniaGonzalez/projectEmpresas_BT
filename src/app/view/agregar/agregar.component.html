@@ -1,0 +1,41 @@
+
+<div class="agregarContenedor" style="width: 30%">
+    <p>Agregar empresa</p>
+    <form form [formGroup]="agregarFor" (ngSubmit)="postForm(agregarFor.value)"> 
+        <div class="row">
+            <div class="col">
+            <input type="text" class="form-control" placeholder="Nombre Comercial" formControlName="nombre_comercial">
+            </div>
+            <div class="col">
+            <input type="text" class="form-control" placeholder="Razón Social" formControlName="razon_social">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col">
+            <input type="text" class="form-control" placeholder="Teléfono" formControlName="telefono">
+            </div>
+            <div class="col">
+            <input class="form-control" type="text" placeholder="Correo electrónico" formControlName="correo" >
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col">
+            <input type="text" class="form-control" placeholder="NIT" formControlName="nit">
+            </div>
+            <div class="col">
+            <input type="text" class="form-control" placeholder="Estado" formControlName="estado">
+            </div>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col">
+            <input type="text" class="form-control" placeholder="Dirección" formControlName="direccion">
+            </div>
+        </div>
+        <br>
+        <button type="submit" class="btn btn-primary">Aceptar</button>
+        <button routerLink="/view/dashboard" type="button" class="btn btn-dark" (click)="regresar()">Regresar</button>
+    </form>
+</div>
